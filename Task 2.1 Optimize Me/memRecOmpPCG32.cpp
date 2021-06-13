@@ -95,21 +95,20 @@ int main()
     proMatrixA[sizen-1][sizen-1] = costMatrixA[sizen][sizen];
     proMatrixB[sizen-1][sizen-1] = costMatrixB[sizen][sizen];
     #pragma omp parallel 
- {
-     #pragma omp sections
-  {
-      #pragma omp section
-   {
-          FindMinCostA(i,j,sizen);
-   }
-         #pragma omp section
-{
-        FindMaxCostB(i,j,sizen);
-}
+    {
+     	#pragma omp sections
+    	{
+      		#pragma omp section
+    		{
+          		FindMinCostA(i,j,sizen);
+   		}
+         	#pragma omp section
+		{
+        		FindMaxCostB(i,j,sizen);
+		}
       
-  }
-     
- }
+  	}
+     }
 
     //creating productMat as explained in the beginning
  // #pragma omp parallel shared (proMatrixA, proMatrixB) private (i, j, k)
