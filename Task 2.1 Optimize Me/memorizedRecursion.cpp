@@ -62,6 +62,8 @@ int main()
             costMatrixA[i][j] = 1 + rand()% 10;
             costMatrixB[i][j] = 1 + rand()% 10;
             productMat[i][j] = 0;
+		
+	    //this initialisation helps to check if an element of proMatrix is computed or not(when FindCost is called)
             proMatrixA[i][j] = -1;
             proMatrixB[i][j] = -1;
 
