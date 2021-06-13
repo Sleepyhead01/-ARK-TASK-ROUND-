@@ -26,7 +26,7 @@ long long FindMinCostA(int i, int j, int n)
        
     if (proMatrixA[i][j] != -1)
     {
-        return 0;
+        return proMatrixA[i][j];
     }
     //going down or right
     proMatrixA[i][j] = costMatrixA[i][j] + min(FindMinCostA(i + 1, j, n), FindMinCostA(i, j + 1, n));
