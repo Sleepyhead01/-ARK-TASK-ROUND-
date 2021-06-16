@@ -1,3 +1,3 @@
 ```
-Run the game.py script
+Run game.py script
 ```
